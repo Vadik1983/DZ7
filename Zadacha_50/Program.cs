@@ -10,6 +10,17 @@ int rows = 0;
 int columns = 0;
 double min = 0d;
 double max = 0d;
+int numRow = 0;
+int numColumn = 0;
+
+inputRowsColumns(ref rows, ref columns);
+inputMinMax(ref min, ref max);
+double[,] array = GetRandomArray(rows, columns, min, max);
+PrintArray(array);
+InputNumber();
+VerificationNumber(array);
+
+///////////////////////////////////////////////////////////
 
 void inputRowsColumns(ref int rows, ref int columns)
 {
@@ -67,8 +78,7 @@ void PrintArray(double[,] inArray)
     }
 }
 /////////
-int numRow = 0;
-int numColumn = 0;
+
 void InputNumber()
 {
      try
@@ -98,10 +108,3 @@ void VerificationNumber(double[,] inArray)
         Console.Write($"Число не входит в массив!");
     }
 }
-
-inputRowsColumns(ref rows, ref columns);
-inputMinMax(ref min, ref max);
-double[,] array = GetRandomArray(rows, columns, min, max);
-PrintArray(array);
-InputNumber();
-VerificationNumber(array);
